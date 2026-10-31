@@ -126,6 +126,15 @@
 
             tap-ms = <20>;
         };
+
+        //Q1回でQ、Q2回で全角/半角（S+Dのcomboと同じ）
+
+        td_q_lang: tap_dance_q_lang {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <&kp GRAVE>;
+        };
     };
 
     keymap {
@@ -133,7 +142,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E               &kp R    &kp T                                      &kp Y        &kp U  &lt 5 I              &kp O          &kp P
+&td_q_lang        &kp W         &kp E               &kp R    &kp T                                      &kp Y        &kp U  &lt 5 I              &kp O          &kp P
 &kp A             &kp S         &kp D               &kp F    &kp G                                      &kp H        &kp J  &kp K                &kp L          &lt 5 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C               &kp V    &kp B                                      &kp N        &kp M  &kp COMMA            &kp DOT        &mt RIGHT_SHIFT SLASH
 &mt LCTRL ESCAPE  &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &kp INS  &lt 5 TAB  &lt 2 SPACE    &lt 5 BACKSPACE  &lt 4 ENTER         &lt 6 RIGHT_BRACKET  &kp BACKSLASH  &kp DEL
