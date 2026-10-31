@@ -132,7 +132,7 @@
         td_q_lang: tap_dance_q_lang {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp Q>, <&kp GRAVE>;
         };
     };
